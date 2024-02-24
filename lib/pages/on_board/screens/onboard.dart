@@ -1,6 +1,9 @@
+import 'dart:developer';
+
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:plants_app/core/theme/colors/colors.dart';
+import 'package:plants_app/pages/on_board/widgets/bottom_navigation_bottom.dart';
 import '../../../core/constant/constant.dart';
 
 class OnBoard extends StatefulWidget {
@@ -57,14 +60,21 @@ class _OnBoardState extends State<OnBoard> with SingleTickerProviderStateMixin {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         actions: [
-          Text(
-            l(context).skip,
-            style: const TextStyle(
-              color: Colors.black,
-              fontSize: 14,
+          TextButton(
+            onPressed: () {
+              debugger(message: "click here");
+            },
+            child: Text(
+              l(context).skip,
+              style: const TextStyle(color: Colors.black, fontSize: 14),
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: BottomNavigationButton(
+        current: counter,
+        carouselController: _carouselController,
+        controller: animationController,
       ),
     );
   }

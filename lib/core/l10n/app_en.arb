@@ -2,5 +2,7 @@
   "skip": "skip",
   "firstOnboard": "Enjoy your\nLife with Plants",
   "secondOnboard": "Greener with\nEvery Tap..",
-  "thirdOnboard": "Leaf by Leaf,\nGrow Smart."
+  "thirdOnboard": "Leaf by Leaf,\nGrow Smart.",
+  "alreadyAccount": "Already got an account?",
+  "login": "Login"
 }

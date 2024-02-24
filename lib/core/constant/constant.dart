@@ -5,3 +5,12 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 AppLocalizations l(BuildContext context) {
   return AppLocalizations.of(context)!;
 }
+
+Widget sh(double val) {
+  return SizedBox(height: val);
+}
+
+Widget sw(double val) {
+  return SizedBox(width: val);
+}
+
