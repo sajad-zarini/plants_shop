@@ -1,8 +1,11 @@
 {
+  "@@locale": "en",
   "skip": "skip",
   "firstOnboard": "Enjoy your\nLife with Plants",
-  "secondOnboard": "Greener with\nEvery Tap..",
-  "thirdOnboard": "Leaf by Leaf,\nGrow Smart.",
+  "secondOnboard": "Thriving with\n Each Tap.",
+  "thirdOnboard": "Greener with\nEvery Tap..",
+  "fourthOnboard": "Leaf by Leaf,\nGrow Smart.",
   "alreadyAccount": "Already got an account?",
-  "login": "Login"
+  "login": "Login",
+  "signUp": "SignUp"
 }

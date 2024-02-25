@@ -24,7 +24,7 @@ class PlantHome extends StatelessWidget {
       ],
       supportedLocales: L10n.all,
       theme: AppTheme.appTheme.copyWith(),
-      home: OnBoard(),
+      home: const OnBoard(),
     );
   }
 }

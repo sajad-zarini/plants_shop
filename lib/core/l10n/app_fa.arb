@@ -1,8 +1,11 @@
 {
+  "@@locale": "fa",
   "skip": "پریدن",
   "firstOnboard": "از زندگی خود با گیاهان لذت ببرید",
-  "secondOnboard": "سبزتر با\nهر ضربه..",
-  "thirdOnboard": "برگ به برگ،\nهوشمند رشد کنید.",
+  "secondOnboard": "شکوفایی با\n هر ضربه..",
+  "thirdOnboard": "سبزتر با\nهر ضربه..",
+  "fourthOnboard": "برگ به برگ،\nهوشمند رشد کنید.",
   "alreadyAccount": "از قبل یک حساب کاربری دارید؟",
-  "login": "ورود"
+  "login": "ورود",
+  "signUp": "عضویت"
 }
