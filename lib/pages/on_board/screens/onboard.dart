@@ -1,8 +1,8 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:lottie/lottie.dart';
 import 'package:plants_app/core/theme/colors/colors.dart';
+import 'package:plants_app/pages/auth/sign_in/sign_in.dart';
 import '../../../core/constant/constant.dart';
 
 class OnBoard extends StatefulWidget {
@@ -297,13 +297,23 @@ class _OnBoardState extends State<OnBoard> with TickerProviderStateMixin {
                 child: SlideTransition(
                   position: _singInTranslateAnimation,
                   child: InkWell(
-                    onTap: () {},
-                    child: Text(
-                      l(context).alreadyAccount,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        color: AppColor.secondary,
-                        fontWeight: FontWeight.w700,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignInPage(),
+                        ),
+                      );
+                    },
+                    child: Hero(
+                      tag: l(context).login,
+                      child: Text(
+                        l(context).alreadyAccount,
+                        style: const TextStyle(
+                          fontSize: 16,
+                          color: AppColor.secondary,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                     ),
                   ),
