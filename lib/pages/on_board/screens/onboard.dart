@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:plants_app/core/theme/colors/colors.dart';
 import 'package:plants_app/pages/auth/sign_in/sign_in.dart';
-import 'package:plants_app/pages/auth/sign_up/name.dart';
+import 'package:plants_app/pages/auth/sign_up/screen/name.dart';
 import '../../../core/constant/constant.dart';
 
 class OnBoard extends StatefulWidget {
@@ -193,20 +193,14 @@ class _OnBoardState extends State<OnBoard> with TickerProviderStateMixin {
                         color: Colors.black,
                         fontSize: 38,
                       ),
-                      children: textDescription[currentCarousel]
-                          .split(" ")
-                          .asMap()
-                          .entries
-                          .map((entry) {
+                      children: textDescription[currentCarousel].split(" ").asMap().entries.map((entry) {
                         final index = entry.key;
                         final element = entry.value;
 
                         return TextSpan(
                           text: "$element ",
                           style: TextStyle(
-                            fontWeight: index ==
-                                    l(context).firstOnboard.split(" ").length -
-                                        1
+                            fontWeight: index == l(context).firstOnboard.split(" ").length - 1
                                 ? FontWeight.bold
                                 : FontWeight.normal,
                           ),
@@ -274,7 +268,8 @@ class _OnBoardState extends State<OnBoard> with TickerProviderStateMixin {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const NamePage(),),
+                              builder: (context) => const NamePage(),
+                            ),
                           );
                         },
                         child: Padding(

@@ -1,8 +1,9 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
-import '../../../core/constant/constant.dart';
-import '../../../core/theme/colors/colors.dart';
+import '../../../../core/constant/constant.dart';
+import '../../../../core/theme/colors/colors.dart';
+import 'theme.dart';
 
 class NamePage extends StatefulWidget {
   const NamePage({super.key});
@@ -26,9 +27,7 @@ class _NamePageState extends State<NamePage> {
       appBar: AppBar(
         leading: GestureDetector(
           onTap: () {
-            !currentFocus.hasPrimaryFocus
-                ? currentFocus.unfocus()
-                : Navigator.pop(context);
+            !currentFocus.hasPrimaryFocus ? currentFocus.unfocus() : Navigator.pop(context);
           },
           child: Padding(
             padding: const EdgeInsets.all(10),
@@ -50,9 +49,7 @@ class _NamePageState extends State<NamePage> {
       body: GestureDetector(
         onHorizontalDragUpdate: (DragUpdateDetails details) {
           if (details.delta.dx > 0) {
-            !currentFocus.hasPrimaryFocus
-                ? currentFocus.unfocus()
-                : Navigator.pop(context);
+            !currentFocus.hasPrimaryFocus ? currentFocus.unfocus() : Navigator.pop(context);
           }
         },
         onTap: () {
@@ -126,13 +123,11 @@ class _NamePageState extends State<NamePage> {
                   onPressed: _nameController.text.isEmpty
                       ? null
                       : () {
-                          // Navigator.push(
-                          //   context,
-                          //   CupertinoPageRoute<Widget>(
-                          //     builder: (BuildContext context) =>
-                          //         ThemePage(key: widget.key),
-                          //   ),
-                          // );
+                          localUser.setString("name", _nameController.text);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (BuildContext context) => ThemePage(key: widget.key)),
+                          );
                         },
                   icon: const Icon(
                     Icons.arrow_forward,
