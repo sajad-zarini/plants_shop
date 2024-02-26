@@ -8,5 +8,6 @@
   "alreadyAccount": "Already got an account?",
   "login": "Login",
   "signUp": "SignUp",
-  "back": "back"
+  "back": "back",
+  "name": "Name"
 }

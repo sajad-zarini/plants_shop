@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:plants_app/core/theme/colors/colors.dart';
 import 'package:plants_app/pages/auth/sign_in/sign_in.dart';
+import 'package:plants_app/pages/auth/sign_up/name.dart';
 import '../../../core/constant/constant.dart';
 
 class OnBoard extends StatefulWidget {
@@ -269,17 +270,26 @@ class _OnBoardState extends State<OnBoard> with TickerProviderStateMixin {
                             color: AppColor.primary,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const NamePage(),),
+                          );
+                        },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
                             vertical: 10,
                             horizontal: 20,
                           ),
-                          child: Text(
-                            l(context).signUp,
-                            style: const TextStyle(
-                              fontSize: 28,
-                              color: AppColor.primary,
+                          child: Hero(
+                            tag: l(context).signUp,
+                            child: Text(
+                              l(context).signUp,
+                              style: const TextStyle(
+                                fontSize: 28,
+                                color: AppColor.primary,
+                              ),
                             ),
                           ),
                         ),
