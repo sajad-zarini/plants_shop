@@ -16,6 +16,9 @@ class _NamePageState extends State<NamePage> {
 
   @override
   Widget build(BuildContext context) {
+    /// check keyboard open
+    FocusScopeNode currentFocus = FocusScope.of(context);
+
     return Scaffold(
       backgroundColor: AppColor.white,
 
@@ -23,7 +26,9 @@ class _NamePageState extends State<NamePage> {
       appBar: AppBar(
         leading: GestureDetector(
           onTap: () {
-            Navigator.pop(context);
+            !currentFocus.hasPrimaryFocus
+                ? currentFocus.unfocus()
+                : Navigator.pop(context);
           },
           child: Padding(
             padding: const EdgeInsets.all(10),
@@ -45,7 +50,14 @@ class _NamePageState extends State<NamePage> {
       body: GestureDetector(
         onHorizontalDragUpdate: (DragUpdateDetails details) {
           if (details.delta.dx > 0) {
-            Navigator.pop(context);
+            !currentFocus.hasPrimaryFocus
+                ? currentFocus.unfocus()
+                : Navigator.pop(context);
+          }
+        },
+        onTap: () {
+          if (!currentFocus.hasPrimaryFocus) {
+            currentFocus.unfocus();
           }
         },
         child: SingleChildScrollView(
@@ -142,5 +154,11 @@ class _NamePageState extends State<NamePage> {
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _nameController.dispose();
+    super.dispose();
   }
 }
