@@ -126,7 +126,7 @@ class _ThemePageState extends State<ThemePage> with TickerProviderStateMixin {
                                   },
                                 );
 
-                                localUser.setBool('darkmode', false);
+                                /// store dark mode
                                 setState(() {
                                   isDarkmode = false;
                                 });
@@ -150,7 +150,9 @@ class _ThemePageState extends State<ThemePage> with TickerProviderStateMixin {
                                     rotateController.reverse();
                                   },
                                 );
-                                localUser.setBool('darkmode', true);
+                                
+                                /// store light mode
+                                
                                 setState(
                                   () {
                                     isDarkmode = true;

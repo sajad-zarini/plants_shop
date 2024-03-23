@@ -123,7 +123,7 @@ class _NamePageState extends State<NamePage> {
                   onPressed: _nameController.text.isEmpty
                       ? null
                       : () {
-                          localUser.setString("name", _nameController.text);
+                          /// store name
                           Navigator.push(
                             context,
                             MaterialPageRoute(builder: (BuildContext context) => ThemePage(key: widget.key)),
