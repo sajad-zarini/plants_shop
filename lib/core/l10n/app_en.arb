@@ -9,5 +9,6 @@
   "login": "Login",
   "signUp": "SignUp",
   "back": "back",
-  "name": "Name"
+  "name": "Name",
+  "anonym": "Anonym"
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:plants_app/pages/auth/sign_up/screen/sign_up.dart';
 import 'package:plants_app/pages/auth/sign_up/widget/custom_animation_container.dart';
 import 'package:plants_app/pages/auth/sign_up/widget/custom_button.dart';
 
@@ -150,9 +151,9 @@ class _ThemePageState extends State<ThemePage> with TickerProviderStateMixin {
                                     rotateController.reverse();
                                   },
                                 );
-                                
+
                                 /// store light mode
-                                
+
                                 setState(
                                   () {
                                     isDarkmode = true;
@@ -174,7 +175,12 @@ class _ThemePageState extends State<ThemePage> with TickerProviderStateMixin {
                   Padding(
                     padding: const EdgeInsets.only(left: 20),
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (BuildContext context) => SignUp(key: widget.key)),
+                        );
+                      },
                       icon: const Icon(
                         Icons.arrow_forward,
                         size: 55,
